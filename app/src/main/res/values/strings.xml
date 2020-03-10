@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Jogo21</string>
+    <string name="nome">Nome</string>
+    <string name="jogo_21">Jogo 21</string>
+    <string name="email">Email</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="visualizar_senha">Visualizar Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="email_cadastro">Email</string>
+    <string name="login_cadastro">Login</string>
+    <string name="visualizar_senha_cadastro">Visualizar Senha</string>
+    <string name="cadastro_cadastro">Cadastro</string>
+    <string name="senha_cadastro">Senha</string>
+    <string name="repita_a_senha_cadastro">Repita a Senha</string>
+    <string name="cadastro">Cadastro</string>
+</resources>
