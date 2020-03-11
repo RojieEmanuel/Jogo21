@@ -15,4 +15,8 @@
     <string name="senha_cadastro">Senha</string>
     <string name="repita_a_senha_cadastro">Repita a Senha</string>
     <string name="cadastro">Cadastro</string>
+    <string name="placarjogador">PlacarJogador</string>
+    <string name="placarmaquina">PlacarMaquina</string>
+    <string name="retorno_invalido">as Senhas não Conferem</string>
+    <string name="retorno_erro">Preencha Todos os Campos</string>
 </resources>

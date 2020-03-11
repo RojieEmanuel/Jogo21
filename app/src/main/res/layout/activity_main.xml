@@ -72,6 +72,7 @@
 
     <Button
         android:id="@+id/buttonLogin"
+        android:onClick="onClickbuttonLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
@@ -84,6 +85,7 @@
 
     <Button
         android:id="@+id/buttonCadastro"
+        android:onClick="onClickbuttonCadastro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="99dp"
