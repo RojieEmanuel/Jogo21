@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,22 +29,24 @@ public class CadastroActivity extends AppCompatActivity {
     EditText SenhaCadastro2;
     CheckBox checkBoxVisualizar;
     Button Cadastrar;
-    List<Usuarios> usuarios;
     private String nulo = "";
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
-    public static final int mainActivity  = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
+        sharedPreferences =getSharedPreferences("preferences", MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
         NomeCadastro = (EditText)findViewById(R.id.NomeCadastro);
         LoginCadastro = (EditText)findViewById(R.id.LoginCadastro);
         emailCadastro = (EditText)findViewById(R.id.emailCadastro);
         SenhaCadastro = (EditText)findViewById(R.id.SenhaCadastro);
         SenhaCadastro2 = (EditText)findViewById(R.id.SenhaCadastro2);
         checkBoxVisualizar = (CheckBox)findViewById(R.id.checkBoxVisualizar);
-        usuarios = new ArrayList<>();
 
 
 
@@ -114,17 +117,11 @@ public class CadastroActivity extends AppCompatActivity {
 
         }else{
             if (Ssenha.equals(Ssenha2)) {
-                Intent intent = new Intent(this, MainActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("nome", Snome);
-                bundle.putString("email", Semail);
-                bundle.putString("login", Slogin);
-                bundle.putString("senha", Ssenha);
-                bundle.putString("senha2", Ssenha2);
-                Usuarios u = new Usuarios(Snome, Semail, Slogin, Ssenha);
-                usuarios.add(u);
-                intent.putExtras(bundle);
-                setResult(Activity.RESULT_OK, intent);
+                editor.putString("nome", Snome);
+                editor.putString("email", Semail);
+                editor.putString("login", Slogin);
+                editor.putString("senha", Ssenha);
+                editor.putString("senha2", Ssenha2);
                 finish();
             } else {
                 Toast.makeText(this, getString(R.string.retorno_invalido), Toast.LENGTH_LONG).show();

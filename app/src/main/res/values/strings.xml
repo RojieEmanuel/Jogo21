@@ -19,4 +19,5 @@
     <string name="placarmaquina">PlacarMaquina</string>
     <string name="retorno_invalido">as Senhas não Conferem</string>
     <string name="retorno_erro">Preencha Todos os Campos</string>
+    <string name="informacao_errada">Dados Incorretos</string>
 </resources>

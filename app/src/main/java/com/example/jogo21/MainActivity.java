@@ -3,6 +3,7 @@ package com.example.jogo21;
         import androidx.appcompat.app.AppCompatActivity;
 
         import android.content.Intent;
+        import android.content.SharedPreferences;
         import android.os.Bundle;
         import android.text.method.PasswordTransformationMethod;
         import android.util.Log;
@@ -12,6 +13,7 @@ package com.example.jogo21;
         import android.widget.CompoundButton;
         import android.widget.EditText;
         import android.widget.TextView;
+        import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
     CheckBox checkBoxVisualizar;
     Button buttonLogin;
     Button buttonCadastro;
-
-    public static final int Cadastro = 1;
-    public static final int Login = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,18 +50,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickbuttonLogin(View v){
+        SharedPreferences sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
+        String user = sharedPreferences.getString("login", "");
+        String senha = sharedPreferences.getString("senha", "");
+        if(user.equals(editTextLogin.getText().toString()))
+            if(senha.equals(editTextSenha.getText().toString())){
+                Intent intent = new Intent(this, GameActicity.class);
+                startActivity(intent);
+            }
+        else
+            Toast.makeText(this, getString(R.string.informacao_errada), Toast.LENGTH_LONG).show();
 
-        Intent intent = new Intent(this, GameActicity.class);
-        Bundle bundle = new Bundle();
-        intent.putExtras(bundle);
-        startActivityForResult(intent, Login);
     }
 
     public void onClickbuttonCadastro(View v){
         Intent intent = new Intent(this, CadastroActivity.class);
-        Bundle bundle = new Bundle();
-        intent.putExtras(bundle);
-        startActivityForResult(intent, Cadastro);
+        startActivity(intent);
 
     }
 }
