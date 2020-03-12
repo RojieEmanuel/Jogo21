@@ -38,7 +38,7 @@ public class CadastroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
-        sharedPreferences =getSharedPreferences("preferences", MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("preferences", MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
         NomeCadastro = (EditText)findViewById(R.id.NomeCadastro);
@@ -122,6 +122,7 @@ public class CadastroActivity extends AppCompatActivity {
                 editor.putString("login", Slogin);
                 editor.putString("senha", Ssenha);
                 editor.putString("senha2", Ssenha2);
+                editor.commit();
                 finish();
             } else {
                 Toast.makeText(this, getString(R.string.retorno_invalido), Toast.LENGTH_LONG).show();

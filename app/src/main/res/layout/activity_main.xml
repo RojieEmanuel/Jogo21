@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animationCache="false"
-    android:background="#BFD5D3"
+    android:background="@drawable/game"
     tools:context=".MainActivity">
 
 
     <TextView
+
         android:id="@+id/TituloLogin"
         android:layout_width="419dp"
         android:layout_height="42dp"
         android:layout_marginStart="176dp"
         android:layout_marginEnd="176dp"
-        android:background="#D5CFCF"
         android:backgroundTintMode="multiply"
         android:text="@string/jogo_21"
+        android:textColor="@color/cardview_light_background"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="30sp"
@@ -29,42 +30,45 @@
 
     <EditText
         android:id="@+id/editTextLogin"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#00ECDEDE"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/login"
+        android:textColorHint="@color/cardview_light_background"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TituloLogin" />
 
     <EditText
         android:id="@+id/editTextSenha"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="20dp"
         android:ems="10"
-        android:inputType="numberPassword"
         android:hint="@string/senha"
+        android:textColorHint="@color/cardview_light_background"
+        android:inputType="numberPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
 
 
-
     <CheckBox
         android:id="@+id/checkBoxVisualizar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="211dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/visualizar_senha"
+        android:textColor="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,12 +76,12 @@
 
     <Button
         android:id="@+id/buttonLogin"
-        android:onClick="onClickbuttonLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClickbuttonLogin"
         android:text="@string/entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,12 +89,12 @@
 
     <Button
         android:id="@+id/buttonCadastro"
-        android:onClick="onClickbuttonCadastro"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="99dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="99dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onClickbuttonCadastro"
         android:text="@string/cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

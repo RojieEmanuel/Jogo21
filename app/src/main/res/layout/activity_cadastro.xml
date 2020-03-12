@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/game"
     tools:context=".CadastroActivity">
 
     <EditText
@@ -13,9 +14,11 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
+
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Name"
+        android:textColorHint="@color/cardview_light_background"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TituloCadastro" />
@@ -30,6 +33,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="@string/login"
+        android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailCadastro" />
@@ -44,6 +48,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:hint="@string/email"
+        android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NomeCadastro" />
@@ -58,6 +63,7 @@
         android:ems="10"
         android:inputType="numberPassword"
         android:hint="@string/senha_cadastro"
+        android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LoginCadastro" />
@@ -72,6 +78,7 @@
         android:ems="10"
         android:inputType="numberPassword"
         android:hint="@string/repita_a_senha_cadastro"
+        android:textColorHint="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SenhaCadastro" />
@@ -84,6 +91,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="50dp"
         android:text="@string/cadastro_cadastro"
+        android:textColor="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -96,6 +104,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="50dp"
         android:text="@string/visualizar_senha_cadastro"
+        android:textColor="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SenhaCadastro2" />

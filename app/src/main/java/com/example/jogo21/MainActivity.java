@@ -57,10 +57,12 @@ public class MainActivity extends AppCompatActivity {
             if(senha.equals(editTextSenha.getText().toString())){
                 Intent intent = new Intent(this, GameActicity.class);
                 startActivity(intent);
+            }else {
+                Toast.makeText(this, getString(R.string.informacao_errada), Toast.LENGTH_LONG).show();
             }
-        else
-            Toast.makeText(this, getString(R.string.informacao_errada), Toast.LENGTH_LONG).show();
-
+        else {
+                Toast.makeText(this, getString(R.string.informacao_errada), Toast.LENGTH_LONG).show();
+            }
     }
 
     public void onClickbuttonCadastro(View v){
